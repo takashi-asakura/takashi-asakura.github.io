@@ -1,0 +1,875 @@
+@charset "UTF-8";
+/* CSS Document */
+html{
+	overflow: auto;
+	height: 100vh;
+	box-sizing: border-box;
+
+}
+body{
+	background-color: #444;
+	color: #444;
+	font-family: 'Montserrat', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	font-feature-settings:"palt";
+	overflow: hidden;
+	min-width: 1440px;
+}
+
+/*ロード画面*/
+#loader-bg {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background: #fff;
+  z-index: 1;
+}
+#loader {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 300px;
+  margin-top: -150px;
+  margin-left: -150px;
+  text-align: center;
+  color: #000;
+  z-index: 2;
+}
+
+ .load_logo{
+	 width: 300px;
+	 height: 300px;
+}
+
+
+#wrap{
+	display: none;
+}
+#page-top{
+	display: none;
+}
+
+
+
+
+/*ーーーーーーーーーーーーーーーーーーーーーーーーーーTOPーーーーーーーーーーーーーー*/
+li{
+	text-align: center;
+	font-weight: bold;
+	transition: all 700ms 0s ease;
+}
+li:hover{
+	background-color: #1FFF36;
+}
+.logo_type{
+	width: 1024px;
+	height: 276px;
+}
+.box{
+	width: 100%;
+	height: 400px;
+	background: white;
+	position: relative;
+}
+
+.logo{
+	position: absolute;
+	top: 503px;
+}
+.logo_mark{
+	    margin: 30px 60px 676px;
+}
+.menu{
+	background-color: white;
+	width: 250px;
+	height: 800px;
+	padding-top: 200px;
+	-webkit-transform: skew(-15deg);
+	   -moz-transform: skew(-15deg);
+	     -o-transform: skew(-15deg);
+	margin-right: 90px;
+}
+.menu_box{
+	position: absolute;
+	right:0;
+	top: 0;
+}
+
+#top-head {
+    top: -100px;
+    width: 100%;
+    padding: 30px 0 0;
+    line-height: 1;
+    z-index: 999;
+}
+
+#top-head a,
+#top-head {
+    color: #444;
+    text-decoration: none;
+}
+
+
+#global-nav ul {
+    list-style: none;
+    font-size: 14px;
+	
+}
+#global-nav ul li {
+	margin-bottom: 30px;
+}
+
+
+
+/*スクロールダウン*/
+.arrows {
+    width: 60px;
+    height: 72px;
+    position: absolute;
+    right: 90px;
+    margin-left: -30px;
+    bottom: 220px;
+}
+
+.arrows path {
+    stroke: #444;
+    fill: transparent;
+    stroke-width: 1px;  
+    animation: arrow 2s infinite;
+    -webkit-animation: arrow 2s infinite; 
+}
+
+@keyframes arrow
+{
+0% {opacity:0}
+40% {opacity:1}
+80% {opacity:0}
+100% {opacity:0}
+}
+
+@-webkit-keyframes arrow /*Safari and Chrome*/
+{
+0% {opacity:0}
+40% {opacity:1}
+80% {opacity:0}
+100% {opacity:0}
+}
+
+.arrows path.a1 {
+    animation-delay:-1s;
+    -webkit-animation-delay:-1s; /* Safari 和 Chrome */
+}
+
+.arrows path.a2 {
+    animation-delay:-0.5s;
+    -webkit-animation-delay:-0.5s; /* Safari 和 Chrome */
+}
+
+.arrows path.a3 {   
+    animation-delay:0s;
+    -webkit-animation-delay:0s; /* Safari 和 Chrome */
+}
+.top_arrows{
+	top:-200px;
+	right: 210px;
+}
+
+.section_top{
+	position: relative;
+}
+.hero_img{
+	margin-left: 300px;
+}
+.hero_box{
+	width: 1200px;
+	background-color: white;
+	position: absolute;
+	bottom: 0;
+	-webkit-transform: skew(-25deg);
+	   -moz-transform: skew(-25deg);
+	     -o-transform: skew(-25deg);
+	left: -70px;
+}
+.hero_box_a{
+	width: 1200px;
+	height: 220px;
+	background-color: white;
+	position: absolute;
+	top: 600px;
+	-webkit-transform: skew(-25deg);
+	   -moz-transform: skew(-25deg);
+	     -o-transform: skew(-25deg);
+}
+.hero_text{
+	font-size: 72px;
+	font-weight: bold;
+	padding: 45px 165px;
+	letter-spacing: 20px;
+	display: block;
+	transition: all 700ms 0s ease;
+}
+.hero_text:hover{
+	text-shadow: 5px 5px 2px #444 , -5px -5px 1px #bbb;
+}
+
+.hero_img2{
+	width: 100%;
+}
+.in_hero_img{
+	width: 1600px;
+}
+.hero_box2{
+	width: 1200px;
+	background-color: white;
+	position: absolute;
+	bottom: 0;
+	right: -60px;
+	-webkit-transform: skew(-25deg);
+	   -moz-transform: skew(-25deg);
+	     -o-transform: skew(-25deg);
+}
+.hero_box2_a{
+	width: 1200px;
+	height: 220px;
+	background-color: white;
+	position: absolute;
+	top: 600px;
+	right: 0;
+	-webkit-transform: skew(-25deg);
+	   -moz-transform: skew(-25deg);
+	     -o-transform: skew(-25deg);
+}
+
+
+
+/*ーーーーーーーーーーーーーーーーーーーーーーーーーーーーPROFILEーーーーーーーーーーーーーー*/
+.sub_title{
+	position: absolute;
+	left: 300px;
+	bottom: 25px;
+	font-weight: bold;
+	letter-spacing: 7px;
+}
+
+.arrows2 path {
+    stroke: #fff;
+}
+.logo_mark2{
+	margin: 30px 60px 0; 
+	position: absolute;
+}
+.menu2{
+	background-color: none;
+	width: 250px;
+	height: 800px;
+	padding-top: 200px;
+}
+.hbox{
+	bottom: -100px;
+}
+.section{
+	background-color: white;
+	position: relative;
+}
+.section_width{
+	width: 70%;
+	margin: 0 auto;
+}
+.name_ruby{
+	font-size: 14px;
+	line-height: 2.5em;
+}
+.name{
+	font-size: 36px;
+}
+.name_text{
+	font-size: 30px;
+	font-weight: bold;
+	margin: 100px 0;
+	text-align: center;
+}
+.name_text br{
+	display: none;
+}
+.saitama{
+	font-size: 24px;
+	margin-bottom: 100px;
+}
+h3{
+	font-size: 24px;
+	margin-bottom: 10px;
+	text-decoration: underline #999;
+}
+.profile_text{
+	font-size: 16px;
+	padding-bottom: 100px;
+	line-height: 2.5em;
+}
+
+
+
+/*ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーPOLISYーーーーーーーーーーーーーー*/
+.menu_list a{
+	color: white;
+}
+.polisy_title{
+	font-size: 30px;
+	font-weight: bold;
+	padding: 100px 0 200px;
+	text-align: center;
+}
+.polisy_title br{
+	display: none;
+}
+
+.polisy_job{
+	font-size: 24px;
+	text-decoration: underline #999;
+	text-align: center;
+	margin-bottom: 20px;
+}
+.polisy_text{
+	font-size: 16px;
+	line-height: 2.5em;
+	text-align: center;
+	padding-bottom: 600px;
+}
+.hito_img{
+	position: absolute;
+	right: 0;
+	bottom: 200px;
+}
+.hito_img2{
+	position: absolute;
+	bottom: 200px;
+}
+.hito_img3{
+	position: absolute;
+	right: -100px;
+	bottom: 200px;
+}
+.section_box{
+	position: relative;
+}
+.text_outer{
+	margin-right: 500px;
+	width: 800px;
+}
+.text_outer2{
+	margin-left: 500px;
+	width: 600px;
+
+}
+
+
+
+/*ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーWORKSーーーーーーーーーーーーーー*/
+.works_title{
+	font-size: 24px;
+	text-decoration: underline #999;
+	margin: 30px 0;
+}
+.works_job{
+	font-size: 18px;
+	margin-bottom: 20px;
+}
+.works_text{
+	font-size: 16px;
+}
+
+.works_img{
+	width: 1000px;
+	margin: 0 auto;
+}
+.works_link{
+	transition: all 700ms 0s ease;
+}
+.works_link:hover{
+	text-shadow: 5px 5px 2px #444 , -5px -5px 1px #bbb;
+
+}
+
+
+
+/*ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーCONTACTーーーーーーーーーーーーーー*/
+.contact_text{
+	font-size: 24px;
+	margin-bottom: 200px;
+	text-align: center;
+	line-height: 2em;
+}
+.contact_text br{
+		display: none;
+	}
+
+.contact_name{
+	font-size: 16px;
+	position: absolute;
+	left: 200px;
+	top: 50px;
+	text-decoration: underline #999;
+}
+
+.contact_icon{
+	width: 100px;
+	float: left;
+}
+.contact_section{
+	position: relative;
+	height: 200px;
+	width: 500px;
+	height: 100px;
+	transition: all 700ms 0s ease;
+	margin-bottom: 200px;
+}
+
+.contact_section:hover{
+	text-shadow: 5px 5px 2px #444 , -5px -5px 1px #bbb;
+}
+
+
+
+
+/*ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーFOOTERーーーーーーーーーーーーーー*/
+
+.footer{
+	width: 100%;
+	height: 600px;
+	background-color: white;
+	position: relative;
+}
+.footer_bottom{
+	padding-bottom: 50px;
+}
+.black_box{
+	width: 1200px;
+	height: 200px;
+	background-color: #444;
+	position: absolute;
+	bottom: 0;
+}
+.footer_logo{
+	height: 100px;
+	margin-top: 50px;
+}
+.icon{
+	padding-top: 150px;
+	
+}
+hr{
+	height: 1px;
+	width: 200px;
+	margin: 25px 50px 0;
+	border-top: 1px #444 solid;
+	float: left;
+	
+}
+.fb_img{
+	width: 50px;
+	margin-right: 50px;
+}
+.inst_img{
+	width: 50px;
+}
+.gyaku{
+	transform: rotate(180deg);
+}
+.arrows_outer path{
+	transition: all 700ms 0s ease;
+}
+.arrows_outer path:hover{
+	stroke: #1FFF36;
+	stroke-width: 5px; 
+}
+
+
+/*ハンバーガー*/
+.sp_menu{
+	display: none;
+}
+/*ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+SP
+ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
+@media screen and (max-width:768px){
+	body{
+		overflow: hidden;
+		min-width: 275px;
+	}
+/*ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーTOPーーーーーーーーーーーーーー*/
+	.menu_box{
+		display: none;
+	}
+	.sp_list{
+		margin-bottom: 50px;
+	}
+	.logo_mark{
+		width: 36px;
+		margin-left: 20px;
+		top: -300px;
+	}
+	.logo_takashi{
+		max-width: 280px;
+		height: auto;
+		z-index: 1;
+	}
+	#mobile-head{
+		position: absolute;
+		top: -200px;
+	}
+	#mobile-head2{
+		position: absolute;
+		top: 90px;
+	}
+	.arrows {
+    position: absolute;
+    right: 0px;
+	}
+	.arrows path{
+		stroke: #fff;
+	}
+
+/*ハンバーガー*/
+.sp_menu {
+  padding:10px;
+	display: block;
+	position: absolute;
+	top: 25px;
+	right: 20px;
+	
+}
+
+#nav-drawer {
+  position: relative;
+}
+
+/*チェックボックス等は非表示に*/
+.nav-unshown {
+  display:none;
+}
+
+/*アイコンのスペース*/
+#nav-open {
+  display: inline-block;
+  width: 30px;
+  height: 22px;
+  vertical-align: middle;
+}
+
+/*ハンバーガーアイコンをCSSだけで表現*/
+#nav-open span, #nav-open span:before, #nav-open span:after {
+  position: absolute;
+  height: 3px;/*線の太さ*/
+  width: 25px;/*長さ*/
+  border-radius: 3px;
+  background: #fff;
+  display: block;
+  content: '';
+  cursor: pointer;
+}
+#nav-open span:before {
+  bottom: -8px;
+}
+#nav-open span:after {
+  bottom: -16px;
+}
+
+/*閉じる用の薄黒カバー*/
+#nav-close {
+  display: none;/*はじめは隠しておく*/
+  position: fixed;
+  z-index: 99;
+  top: 0;/*全体に広がるように*/
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0;
+  transition: .3s ease-in-out;
+}
+
+/*中身*/
+#nav-content {
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;/*最前面に*/
+  width: 90%;/*右側に隙間を作る（閉じるカバーを表示）*/
+  max-width: 330px;/*最大幅（調整してください）*/
+  height: 100%;
+  background: #fff;/*背景色*/
+  transition: .3s ease-in-out;/*滑らかに表示*/
+  -webkit-transform: translateX(-105%);
+  transform: translateX(-105%);/*左に隠しておく*/
+}
+
+/*チェックが入ったらもろもろ表示*/
+#nav-input:checked ~ #nav-close {
+  display: block;/*カバーを表示*/
+  opacity: .5;
+}
+
+#nav-input:checked ~ #nav-content {
+  -webkit-transform: translateX(0%);
+  transform: translateX(0%);/*中身を表示（右へスライド）*/
+  box-shadow: 6px 0 25px rgba(0,0,0,.15);
+}
+
+
+	.box{
+		height: 0;
+	}
+	.hero_img{
+		margin-left: 100px;
+	}
+	.hero_img img{
+		width: 315px;
+	}
+	.hero_box{
+		width: 315px;
+		height: 5px;
+		padding-bottom: 50px;
+	}
+	.hero_box_a{
+		width: 315px;
+		height: 5px;
+		padding-bottom: 50px;
+	}
+	.hero_text {
+    font-size: 18px;
+    padding: 20px 100px;
+	letter-spacing: 10px;
+	}
+	.hero_img2 img{
+	width: 315px;
+	}
+	.in_hero_img{
+		width: 1600px;
+	}
+	.hero_box2{
+		width: 315px;
+		height: 5px;
+		padding-bottom: 50px;
+	}
+	.hero_box2_a{
+		width: 315px;
+		height: 5px;
+		padding-bottom: 50px;
+	}
+/*ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーPROFILEーーーーーーーーーーーーーー*/
+/*header*/
+	.section{
+		margin-top: 330px;
+		position: relative;
+		padding-top: 150px;
+	}
+	.section_width{
+		width: 90%;
+	}
+	.hero_img_sp img{
+		width: 300px;
+		position: absolute;
+		right: -360px;
+	}
+	.logo_mark2{
+	width: 36px;
+	margin-left: 20px;
+	top: 0px;
+	}
+	.hbox{
+		top: 150px;
+		height: 70px;
+		z-index: 1;
+		left: -30px;
+	}
+	.sub_title{
+		font-size: 12px;
+		left: 110px;
+		bottom: 47px;
+		letter-spacing: 3px;
+	}
+	.hbox hr{
+		margin-left: 0;
+	}
+/*section*/
+	.name_ruby{
+		font-size: 9px;
+	}
+	.name{
+		font-size: 14px;
+	}
+	.name_text{
+		font-size: 14px;
+		line-height: 2.5em;
+		margin: 50px 0;
+	}
+	.name_text br{
+		display: block;
+	}
+	.saitama{
+		font-size: 14px;
+	}
+	h3{
+		font-size: 14px;
+	}
+	.profile_text{
+		font-size: 9px;
+	}
+	
+	
+/*ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーPOLISYーーーーーーーーーーーーーー*/
+	.hero_img2_sp img{
+		width: 355px;
+		position: absolute;
+		left: 0px;
+	}
+	.hbox2{
+		top: 150px;
+		height: 70px;
+		z-index: 1;
+		left: 95px;
+	}
+	.hbox2 hr{
+		margin-left: 0;
+	}
+	.polisy_title{
+		font-size: 14px;
+		padding: 50px 0 100px;
+	}
+	.polisy_title br{
+	display: block;
+	}
+	.polisy_job{
+		font-size: 14px;
+		text-align: inherit;
+	}
+	.polisy_text{
+		font-size: 10px;
+		text-align: inherit;
+		padding-bottom: 250px;
+
+	}
+	.hito_img,.hito_img2,.hito_img3{
+		width: 200px;
+	}
+	.hito_img,.hito_img3{
+		top: 150px;
+	}
+	.hito_img3{
+		right: -50px;
+	}
+	.hito_img2{
+		top: 200px;
+		left: -30px;
+	}
+	.text_outer2{
+		margin-left: 20px;
+	}
+	
+	
+	
+/*ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーWORKSーーーーーーーーーーーーーー*/
+	.works_hero_img img{
+		width: 500px;
+	}
+	.works_hero_img{
+		overflow: hidden;
+		width: 300px;
+	}
+	.works_img{
+		width: 320px;
+		text-align: center;
+	}
+	.works_title{
+		font-size: 14px;
+	}
+	.works_job{
+		font-size: 10px;
+	}
+	.works_text{
+		font-size: 10px;
+		line-height: 1.5em;
+	}
+
+	
+/*ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーCONTACTーーーーーーーーーーーーーー*/	
+	.contact_text{
+		font-size: 14px;
+		margin-bottom: 100px;
+	}
+	.contact_text br{
+		display: block;
+	}
+	.contact_icon{
+		width: 50px;
+	}
+	.contact_name{
+		left: 80px;
+		top:20px;
+	}
+	.contact_section{
+		margin-bottom: 50px;
+	}
+	
+	
+	
+
+
+
+/*ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーFOOTERーーーーーーーーーーーーーー*/
+	.footer{
+		height: 350px;
+	}
+	.fb_img{
+		width: 20px;
+		margin-right: 30px;
+	}
+	.inst_img{
+		width: 20px;
+	}
+	hr{
+		width: 100px;
+		margin: 10px 30px;
+	}
+	.black_box {
+		width: 280px;
+		height: 100px;
+	}
+	.footer_logo{
+		width: 200px;
+		height: auto;
+	}
+	.arrows_outer{
+		position: absolute;
+		right: 0px;
+    	bottom: 0px;
+	}
+	.arrows_outer path{
+		stroke: #444;
+	}
+
+
+
+
+
+}
+
+
+
+/*ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーJSーーーーーーーーーーーーーー*/
+
+
+
+
+
+
+
+
+
+
+
