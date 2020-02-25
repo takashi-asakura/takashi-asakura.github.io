@@ -5,11 +5,11 @@
 <title>TAKASHI ASAKURA</title>
 <link rel="stylesheet" href="css/reset.css">
 <link rel="stylesheet" href="css/style.css">
-	
+
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans" rel="stylesheet">
 <meta name="Description" content="Webデザイナー/カメラマン　浅倉崇のウェブサイトです。">
-	
+
 <meta property="og:title" content="TAKASHI ASAKURA">
 <meta property="og:type" content="Website">
 <meta property="og:url" content="http://asakura-takashi.jp/">
@@ -19,33 +19,23 @@
 <meta property="article:publisher" content="http://asakura-takashi.jp/index.html">
 <meta name="format-detection" content="telephone=no">
 <meta name="twitter:card" content="summary" />
-	
+
 <link rel="canonical" href="http://asakura-takashi.jp/">
 <link rel="apple-touch-icon" href="img/logo.png">
 <link rel="shortcut icon" href="favicon.ico">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	
+
 <meta name="google-site-verification" content="gWLtLMbImSVqSTQYMO0RM17pgnHRO2CyIvmJN-Ns-PA" />
 </head>
 
 <body>
-	<!--ロード画面-->
-	
-	<div id="loader-bg">
- 		<div id="loader">
-    		<img src="img/logo-gif.gif" alt="Now Loading..." class="load_logo">	
-    		<p>Now Loading...</p>
-  		</div>
-	</div>
-		
-<div id="wrap">
 <!--header-->
 	<header id="top-head top">
 		<img src="img/logo_w.png" alt="TAKASHI ASAKURAロゴマーク" class="logo_mark">
 			<div id="mobile-head">
 				<h1 class="logo"><img src="img/logo_type_w.png" alt="TAKASHI ASAKURA" class="logo_takashi"></h1>
 			</div>
-		
+
 <!--ハンバーガー-->
 		<div class="sp_menu">
 		  <div id="nav-drawer">
@@ -63,7 +53,7 @@
 		  </div>
 		</div>
 <!--ハンバーガー-->
-		
+
 			<div class="menu_box">
 				<nav id="global-nav">
 					<ul class="menu">
@@ -82,7 +72,7 @@
                 </svg>
 			</div>
 	</header>
-	
+
 <!--profile-->
 	<section class="section_top">
 		<div class="hero_img"><img src="img/1526415683333.jpg" alt="浅倉崇の写真"></div>
@@ -90,7 +80,7 @@
 			<a href="profile/index.html" class="hero_text animsition-link">PROFILE</a>
 		</div>
 	</section>
-	
+
 <!--polisy-->
 	<section class="section_top">
 		<div class="hero_img2"><img src="img/DSCF1025.jpg" alt="polisyのイメージ写真" class="in_hero_img"></div>
@@ -106,7 +96,7 @@
 			<a href="works/index.html" class="hero_text animsition-link">WORKS</a>
 		</div>
 	</section>
-	
+
 <!--contact-->
 <section class="section_top">
 	<div class="hero_img2"><img src="img/DSCF1683.jpg" alt="contactのイメージ写真" class="in_hero_img"></div>
@@ -133,23 +123,5 @@
 			</svg>
 		</a>
 	</footer>
-	
-	</div>
-//<!--ロード画面-->			
-	<script>
-		$(function() {
-		  var h = $(window).height();
-			//$('#wrap').css('display','none');
-		  $('#loader-bg ,#loader').height(h).css('display','block');
-			//2秒たったら強制的にロード画面を非表示
-		  setTimeout(function(){
-			stopload()
-		  }, 1500);
-	function stopload(){
-	  $('#loader-bg').delay(900).fadeOut(800,function(){$('#wrap').css('display','none').fadeIn(1500);});
-	  $('#loader').delay(600).fadeOut(300);
-	}
-		}
-	</script>	
 </body>
 </html>
