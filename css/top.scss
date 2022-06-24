@@ -1,0 +1,173 @@
+@import url(https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap);
+
+$colors: #fff, #000, #000, #000;
+// $colors: #fff, #ad0516, #c1b220, #22226e;
+
+// Inputs
+input[type="radio"] {
+  display: none;
+}
+
+@for $i from 1 through length($colors) {
+  input[type="radio"]#section#{$i}:checked ~ nav label[for="section#{$i}"] {
+    background-color: #ccc;
+  }
+
+  input[type="radio"]#section#{$i}:checked ~ section:nth-of-type(#{$i}) {
+    z-index: 1;
+    top: 0;
+    transition: top 0.5s ease-in-out;
+    transition-delay: 0s;
+  }
+
+  input[type="radio"]#section#{$i}:checked ~ .cover {
+    background-color: nth($colors, $i);
+  }
+}
+
+.toppage {
+  // Navigation
+  .nav {
+    position: fixed;
+    z-index: 2;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    @media screen and (max-width: 767px) {
+      top: 80%;
+    }
+
+    &__item {
+      width: 12px;
+      height: 12px;
+      display: block;
+      margin: 12px auto;
+      border: solid 2px #ccc;
+      border-radius: 50%;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #ccc;
+      }
+    }
+  }
+
+  // Sections
+  section {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    transition-delay: 0.5s;
+  }
+
+  @for $i from 1 through 4 {
+    section:nth-of-type(#{$i}) {
+      background: nth($colors, $i);
+    }
+  }
+
+  // Fix the white-space
+  .cover {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  h1 {
+    font-size: 6em;
+    text-align: center;
+    font-family: "Archivo Black", sans-serif;
+    text-transform: uppercase;
+    color: #000;
+    width: 100%;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+// Base
+html,
+body {
+  height: 100%;
+}
+
+body {
+  overflow: hidden;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+  transition: 0.1s;
+}
+
+.glitch {
+  color: white;
+  font-size: 100px;
+  position: relative;
+  width: 400px;
+  margin: 0 auto;
+  @media screen and (max-width: 767px) {
+    font-size: 50px;
+  }
+}
+@keyframes noise-anim {
+  $steps: 20;
+  @for $i from 0 through $steps {
+    #{percentage($i*(1/$steps))} {
+      clip: rect(random(100) + px, 9999px, random(100) + px, 0);
+    }
+  }
+}
+.glitch:after {
+  content: none;
+  position: absolute;
+  left: 2px;
+  text-shadow: -1px 0 red;
+  top: 0;
+  color: white;
+  background: black;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+  animation: noise-anim 2s infinite linear alternate-reverse;
+  width: 100%;
+}
+
+@keyframes noise-anim-2 {
+  $steps: 20;
+  @for $i from 0 through $steps {
+    #{percentage($i*(1/$steps))} {
+      clip: rect(random(100) + px, 9999px, random(100) + px, 0);
+    }
+  }
+}
+.glitch:before {
+  content: none;
+  position: absolute;
+  left: -2px;
+  text-shadow: 1px 0 blue;
+  top: 0;
+  color: white;
+  background: black;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+  animation: noise-anim-2 3s infinite linear alternate-reverse;
+  width: 100%;
+}
+.glitch:hover,
+.glitch:hover::before,
+.glitch:hover::after {
+  content: attr(data-text);
+  font-size: 150px;
+}
