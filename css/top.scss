@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap);
 
-$colors: #fff, #000, #000, #000;
+$colors: #000, #000, #000, #000;
 // $colors: #fff, #ad0516, #c1b220, #22226e;
 
 // Inputs
@@ -10,7 +10,7 @@ input[type="radio"] {
 
 @for $i from 1 through length($colors) {
   input[type="radio"]#section#{$i}:checked ~ nav label[for="section#{$i}"] {
-    background-color: #ccc;
+    background-color: #fff;
   }
 
   input[type="radio"]#section#{$i}:checked ~ section:nth-of-type(#{$i}) {
@@ -43,12 +43,12 @@ input[type="radio"] {
       height: 12px;
       display: block;
       margin: 12px auto;
-      border: solid 2px #ccc;
+      border: solid 2px #fff;
       border-radius: 50%;
       cursor: pointer;
 
       &:hover {
-        background-color: #ccc;
+        background-color: #fff;
       }
     }
   }
@@ -93,6 +93,7 @@ input[type="radio"] {
     img {
       width: 90%;
       max-width: 100%;
+      filter: invert(1);
     }
   }
 }
@@ -171,4 +172,55 @@ a {
 .glitch:hover::after {
   content: attr(data-text);
   font-size: 150px;
+}
+
+// cursor
+// cursor
+// cursor
+
+body {
+  cursor: none !important; /*もともとあるカーソルは非表示に*/
+}
+
+a:hover,
+label:hover,
+input:hover {
+  cursor: none !important;
+}
+/*カーソル要素*/
+#cursor {
+  position: fixed;
+
+  /*丸の大きさと色の指定*/
+  background: #fff;
+  border-radius: 10px;
+  width: 20px;
+  height: 20px;
+  margin: -10px 0 0 -10px; /*真ん中にくるようにマイナスマージンで調整*/
+
+  z-index: 102; /*一番手前に来るように*/
+  pointer-events: none; /*クリックできなくなるのを防ぐため。noneで対応*/
+  opacity: 0;
+  transition: transform 0.1s; /*アニメーションの秒数指定*/
+}
+
+/*ちょっと遅れてついてくるストーカー要素*/
+#stalker {
+  position: fixed;
+
+  /*丸の大きさと色の指定*/
+  background: rgb(212, 255, 0);
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  margin: -30px 0 0 -30px; /*真ん中にくるようにマイナスマージンで調整*/
+  z-index: 100; /*カーソルの後ろに来るように*/
+  pointer-events: none; /*クリックできなくなるのを防ぐため。noneで対応*/
+  opacity: 0;
+  transition: transform 0.5s; /*アニメーションの秒数指定*/
+}
+
+#cursor.active,
+#stalker.active {
+  transform: scale(1.4);
 }
