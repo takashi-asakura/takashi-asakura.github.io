@@ -4,6 +4,8 @@
   $colors: #000, #000, #000, #000;
   // $colors: #fff, #ad0516, #c1b220, #22226e;
 
+  overflow: hidden;
+
   // Inputs
   input[type="radio"] {
     display: none;
@@ -105,7 +107,6 @@
   }
 
   body {
-    overflow: hidden;
     color: white;
   }
 
