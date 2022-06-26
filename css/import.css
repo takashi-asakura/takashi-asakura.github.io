@@ -2,6 +2,7 @@
 /* import */
 
 @import "top.css";
+@import "sub.css";
 @import "layout--flex--styles.css";
 /*@import "jquery.bxslider.css";*/
 @import "fullscreen.overlay.effects.css";

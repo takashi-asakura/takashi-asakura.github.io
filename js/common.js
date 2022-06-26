@@ -203,15 +203,15 @@ $(document).ready(function () {
     }
     //sp_menu(グローバルナビスタイル用クラス)
     //	if( wid < 1040 ){
-    if (wid < 1041) {
-      $("header .overlay").each(function () {
-        $(this).addClass("sp-nav").removeClass("pc-nav");
-      });
-    } else {
-      $("header .overlay").each(function () {
-        $(this).addClass("pc-nav").removeClass("sp-nav");
-      });
-    }
+    // if (wid < 1041) {
+    //   $("header .overlay").each(function () {
+    //     $(this).addClass("sp-nav").removeClass("pc-nav");
+    //   });
+    // } else {
+    //   $("header .overlay").each(function () {
+    //     $(this).addClass("pc-nav").removeClass("sp-nav");
+    //   });
+    // }
   }
 });
 
@@ -258,3 +258,10 @@ $(function () {
     },
   });
 });
+
+// 著作権表記の「年」表示を自動更新
+function ShowNowYear() {
+  var now = new Date();
+  var year = now.getFullYear();
+  document.write(year);
+}
