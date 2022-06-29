@@ -1,8 +1,16 @@
+$baseC: #000;
+$mainC: #fff;
+$accentC: rgb(212, 255, 0);
+
+$mainF: "Archivo Black", sans-serif;
+
+body {
+  cursor: none !important; /*もともとあるカーソルは非表示に*/
+}
 .top {
   @import url(https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap);
 
   $colors: #000, #000, #000, #000;
-  // $colors: #fff, #ad0516, #c1b220, #22226e;
 
   overflow: hidden;
 
@@ -13,7 +21,7 @@
 
   @for $i from 1 through length($colors) {
     input[type="radio"]#section#{$i}:checked ~ nav label[for="section#{$i}"] {
-      background-color: #fff;
+      background-color: $mainC;
     }
 
     input[type="radio"]#section#{$i}:checked ~ section:nth-of-type(#{$i}) {
@@ -46,12 +54,12 @@
         height: 12px;
         display: block;
         margin: 12px auto;
-        border: solid 2px #fff;
+        border: solid 2px $mainC;
         border-radius: 50%;
         cursor: pointer;
 
         &:hover {
-          background-color: #fff;
+          background-color: $mainC;
         }
       }
     }
@@ -88,9 +96,9 @@
     h1 {
       font-size: 6em;
       text-align: center;
-      font-family: "Archivo Black", sans-serif;
+      font-family: $mainF;
       text-transform: uppercase;
-      color: #000;
+      color: $baseC;
       width: 100%;
 
       img {
@@ -112,7 +120,7 @@
 
   a {
     text-decoration: none;
-    color: #000;
+    color: $baseC;
     transition: 0.1s;
   }
 
@@ -180,10 +188,6 @@
   // cursor
   // cursor
 
-  body {
-    cursor: none !important; /*もともとあるカーソルは非表示に*/
-  }
-
   a:hover,
   label:hover,
   input:hover {
@@ -194,7 +198,7 @@
     position: fixed;
 
     /*丸の大きさと色の指定*/
-    background: #fff;
+    background: $mainC;
     border-radius: 10px;
     width: 20px;
     height: 20px;
@@ -211,7 +215,7 @@
     position: fixed;
 
     /*丸の大きさと色の指定*/
-    background: rgb(212, 255, 0);
+    background: $accentC;
     width: 60px;
     height: 60px;
     border-radius: 30px;
@@ -224,6 +228,6 @@
 
   #cursor.active,
   #stalker.active {
-    transform: scale(1.4);
+    transform: scale(1.8);
   }
 }
