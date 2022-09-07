@@ -1062,6 +1062,9 @@ iframe {
 .mt5rem {
   margin-top: 5rem !important;
 }
+.mt10rem {
+  margin-top: 10rem !important;
+}
 .over-h {
   overflow: hidden;
 }

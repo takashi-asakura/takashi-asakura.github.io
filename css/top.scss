@@ -10,7 +10,7 @@ body {
 .top {
   @import url(https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap);
 
-  $colors: #000, #000, #000, #000;
+  $colors: #000, #000, #000, #000, #000;
 
   overflow: hidden;
 
@@ -77,7 +77,7 @@ body {
       transition-delay: 0.5s;
     }
 
-    @for $i from 1 through 4 {
+    @for $i from 1 through 5 {
       section:nth-of-type(#{$i}) {
         background: nth($colors, $i);
       }

@@ -362,3 +362,49 @@ li {
     }
   }
 }
+
+.logo_list {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(4, minmax(50px, 1fr));
+  position: relative;
+
+  @media screen and (max-width: 767px) {
+    grid-template-columns: repeat(2, minmax(50px, 1fr));
+  }
+
+  li {
+    overflow: hidden;
+    img {
+      transition: 0.4s;
+      object-fit: cover;
+      background-color: #fff;
+    }
+    a {
+      display: block;
+      transition: 0.4s;
+      filter: grayscale(1);
+      &:hover {
+        filter: grayscale(0);
+
+        img {
+          transform: scale(1.05);
+        }
+      }
+
+      @media screen and (max-width: 767px) {
+        filter: grayscale(0);
+      }
+    }
+  }
+}
+
+.mt2rem {
+  margin-top: 2rem !important;
+}
+.mt5rem {
+  margin-top: 5rem !important;
+}
+.mt10rem {
+  margin-top: 10rem !important;
+}
